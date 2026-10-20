@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Email Validation</h2>
+<input type="text" id="email" placeholder="Enter email">
+<button onclick="validateEmail()">Submit</button>
+<p id="message"></p>
+<script>
+function validateEmail() {
+let email = document.getElementById("email").value.trim();
+if (email === "") {
+document.getElementById("message").textContent =
+"Email is required!";
+} else if (!email.includes("@") ||
+!email.includes(".")) {
+document.getElementById("message").textContent =
+"Please enter a valid email!";
+} else {
+document.getElementById("message").textContent =
+"Email looks valid!";
+}
+}
+</script>
+</body>
+</html>

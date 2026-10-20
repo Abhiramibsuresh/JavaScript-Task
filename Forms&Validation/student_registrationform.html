@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+<h2>Student Registration</h2>
+<form id="registrationForm">
+<label>Name:</label>
+<input type="text" id="name">
+<br><br>
+<label>Email:</label>
+<input type="text" id="email">
+<br><br>
+<label>Password:</label>
+<input type="password" id="password">
+<br><br>
+<button type="submit">Register</button>
+</form>
+<p id="message"></p>
+<script>
+let form = document.getElementById("registrationForm");
+form.addEventListener("submit", function(event) {
+event.preventDefault();
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let password = document.getElementById("password").value;
+let message = document.getElementById("message");
+if (name === "") {
+message.textContent = "Name is required!";
+}
+else if (email === "") {
+message.textContent = "Email is required!";
+}
+else if (!email.includes("@") || !email.includes(".")) {
+message.textContent = "Enter a valid email!";
+}
+else if (password.length < 6) {
+message.textContent =
+"Password must contain at least 6 characters!";
+}
+else {
+message.textContent =
+"Registration successful!";
+}
+});
+</script>
+</body>
+</html>
