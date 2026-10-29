@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+Promise.resolve(5)
+.then(number => number + 5)
+.then(number => number * 2)
+.then(result => {
+console.log(result);
+});2
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function waitForMessage() {
+            return new Promise(function(resolve) {
+                setTimeout(function() {
+                    resolve("Message received");
+                }, 2000);
+            });
+        }
+        console.log("Waiting...");
+        waitForMessage().then(function(message) {
+            console.log(message);
+        });
+    </script>
+</body>
+</html>
