@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let number = 5;
+
+Promise.resolve(number)
+    .then(function(value) {
+        return value + 10;
+    })
+    .then(function(result) {
+        return result * 3;
+    })
+    .then(function(finalResult) {
+        console.log("Final Result:", finalResult);
+    })
+    .catch(function(error) {
+        console.log("Error:", error);
+    });
+
+    </script>
+</body>
+</html>
